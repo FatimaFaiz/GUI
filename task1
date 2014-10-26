@@ -1,0 +1,66 @@
+import java.awt.Font; 
+import java.awt.Color; 
+import java.awt.Graphics; 
+import java.awt.Image;
+import java.awt.Toolkit;
+
+import javax.swing.JPanel; 
+import javax.swing.JFrame; 
+public class task1 extends JPanel {
+
+	private static final long serialVersionUID = 1L;
+
+public void paintComponent( Graphics g ) 
+ { 
+ super.paintComponent( g );  
+ 
+ g.setColor( Color.GREEN );
+ g.setFont( new Font( "Serif", Font.BOLD, 20 ) ); 
+ g.drawString( "Fatima Faiz", 0,30 ); 
+g.setColor( Color.BLUE );
+g.setFont( new Font( "Monospaced", Font.ITALIC, 24 ) ); 
+g.drawString( "12f8174", 0,50 ); 
+
+g.setColor( Color.MAGENTA ); 
+g.setFont( new Font( "SansSerif", Font.PLAIN, 18 ) ); 
+g.drawString( "abc", 0,80 ); 
+
+g.setColor( Color.YELLOW );
+g.setFont( new Font( "Serif", Font.BOLD + Font.ITALIC, 18 ) ); 
+g.drawString("04-04-1994", 0,100 ); 
+g.setColor( Color.RED ); 
+g.drawLine( 5, 110, 380, 110 ); 
+g.setColor( Color.BLUE ); 
+g.drawRect( 5, 120, 90, 55 ); 
+g.fillRect( 100, 120, 90, 55 ); 
+g.setColor( Color.CYAN ); 
+g.fillRoundRect( 195, 120, 90, 55, 50, 50 ); 
+g.drawRoundRect( 290, 120, 90, 55, 20, 20 );  
+g.setColor( Color.YELLOW ); 
+g.draw3DRect( 5, 180, 90, 55, true ); 
+g.fill3DRect( 100, 180, 90, 55, false ); 
+g.setColor( Color.MAGENTA ); 
+g.drawOval( 195, 180, 90, 55 ); 
+g.fillOval( 290, 180, 90, 55 ); 
+
+Image img1 = Toolkit.getDefaultToolkit().getImage("Z:/abc/Lab8/src/task1/download.jpg"); 
+g.drawImage(img1, 750, 0, this); 
+g.setColor( Color.BLACK ); 
+int xValues[] = { 70, 80, 90, 100, 110 , 120,130,140,150,160,170,180,190,200}; 
+int yValues[] = { 405,397,392,390,389,395,403,411,417,416,415,408,400,392 }; 
+g.drawPolyline( xValues, yValues, 14 ); 
+ } 
+
+ public static void main( String args[] ) 
+ { 
+ JFrame frame = new JFrame( "Using fonts" ); 
+ frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE ); 
+ 
+ task1 fontJPanel = new task1();
+ fontJPanel.setLocation(0, 0);// create FontJPanel 
+ frame.add( fontJPanel ); // add fontJPanel to frame 
+ frame.setSize( 750, 750 ); // set frame size 
+ frame.setVisible( true ); // display frame   
+ }  
+}  
+
