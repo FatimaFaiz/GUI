@@ -20,6 +20,9 @@ public void paintComponent( Graphics g )
 g.setColor( Color.BLUE );
 g.setFont( new Font( "Monospaced", Font.ITALIC, 24 ) ); 
 g.drawString( "12f8174", 0,50 ); 
+g.setColor( Color.BLACK );
+g.setFont( new Font( "Serif", Font.ITALIC, 20 ) ); 
+g.drawString( "Name", 0,50 ); 
 
 g.setColor( Color.MAGENTA ); 
 g.setFont( new Font( "SansSerif", Font.PLAIN, 18 ) ); 
